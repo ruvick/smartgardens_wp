@@ -3,7 +3,7 @@
 
 		<div class="header__row d-flex">
 
-			<a href="#" class="header__logo logo-icon"><span></span></a>
+			<a href="http://smartgardens.ru" class="header__logo logo-icon"><span></span></a>
 
 			<div class="header__menu menu">
 				<nav class="menu__body">
