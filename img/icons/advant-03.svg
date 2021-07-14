@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="120" height="120" viewBox="0 0 120 120">
+  <defs>
+    <filter id="A_" x="0" y="0" width="120" height="120" filterUnits="userSpaceOnUse">
+      <feOffset dy="7" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="12" result="blur"/>
+      <feFlood flood-color="#f4ac66" flood-opacity="0.702"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <linearGradient id="linear-gradient" x1="0.5" y1="1" x2="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#ee7815"/>
+      <stop offset="1" stop-color="#ffc529"/>
+    </linearGradient>
+  </defs>
+  <g id="a_2" data-name="a++" transform="translate(-1031.947 -1721.757)">
+    <g transform="matrix(1, 0, 0, 1, 1031.95, 1721.76)" filter="url(#A_)">
+      <text id="A_3" data-name="A++" transform="translate(60 65)" fill="#737373" font-size="39.946" font-family="BebasNeueBold, Bebas Neue"><tspan x="-23.948" y="0">A++</tspan></text>
+    </g>
+    <path id="Gradient_Overlay" data-name="Gradient Overlay" d="M1077.055,1786.757h-3.628l-2.965-7.841H1058.6l-2.789,7.841h-3.647l10.728-27.97h3.394Zm-7.666-10.786L1065,1764.053a11.4,11.4,0,0,1-.429-1.872h-.078a10.441,10.441,0,0,1-.449,1.872l-4.35,11.918Zm30.974.449h-7.88v7.86h-2.594v-7.86h-7.861v-2.614h7.861v-7.861h2.594v7.861h7.88Zm27.327,0h-7.88v7.86h-2.594v-7.86h-7.861v-2.614h7.861v-7.861h2.594v7.861h7.88Z" fill="url(#linear-gradient)"/>
+  </g>
+</svg>

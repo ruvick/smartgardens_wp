@@ -1,5 +1,26 @@
 <!-- В этом файле описываем все  всплывающие окна -->
 
+	<!-- Popup-JS -->
+	<div class="popup popup_callback">
+	<div class="popup__content">
+		<div class="popup__body">
+			<div class="popup__close"></div>
+			<div class="popup__item d-flex">
+				<img src="img/popup-img.jpg" alt=""> 
+				<div class="popup__form-block">
+					<h2>Заказать звонок</h2>
+					<form action="#" class="popup__form">
+						<input type="text" name="name" placeholder="Имя" class="popup__form-input input">
+						<input type="tel" name="tel" placeholder="Телефон*" class="popup__form-input input">
+						<input type="text" name="email" placeholder="Email" class="popup__form-input input">
+						<button class="popup__form-btn btn">Заказать</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
 <div style="display: none;">
     <div class="box-modal" id="messgeModal">
         <div class="box-modal_close arcticmodal-close"><?_e("закрыть","rubex");?></div>
