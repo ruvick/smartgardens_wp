@@ -1006,6 +1006,7 @@ body.ie .ibg img {
   flex: 0 1 525px;
   min-height: 40px; }
   .menu__list {
+    display: flex;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
@@ -1294,12 +1295,17 @@ body.ie .ibg img {
       background-repeat: no-repeat;
       background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iOS4wNzEiIGhlaWdodD0iOS4wNzEiIHZpZXdCb3g9IjAgMCA5LjA3MSA5LjA3MSI+DQogIDxkZWZzPg0KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0ibGluZWFyLWdyYWRpZW50IiB4MT0iMC41IiB5MT0iMSIgeDI9IjAuNSIgZ3JhZGllbnRVbml0cz0ib2JqZWN0Qm91bmRpbmdCb3giPg0KICAgICAgPHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjZWU3ODE1Ii8+DQogICAgICA8c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiNmZmM1MjkiLz4NCiAgICA8L2xpbmVhckdyYWRpZW50Pg0KICA8L2RlZnM+DQogIDxwYXRoIGlkPSLQn9GA0Y/QvNC+0YPQs9C+0LvRjNC90LjQul8xX9C60L7Qv9C40Y8iIGRhdGEtbmFtZT0i0J/RgNGP0LzQvtGD0LPQvtC70YzQvdC40LogMSDQutC+0L/QuNGPIiBkPSJNODU1LjIwNywyOTk1LjI1N2wzLjUzNiwzLjUzNmExLDEsMCwwLDEsMCwxLjQxNGwtMy41MzYsMy41MzVhMSwxLDAsMCwxLTEuNDE0LDBsLTMuNTM2LTMuNTM1YTEsMSwwLDAsMSwwLTEuNDE0bDMuNTM2LTMuNTM2QTEsMSwwLDAsMSw4NTUuMjA3LDI5OTUuMjU3WiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTg0OS45NjQgLTI5OTQuOTY0KSIgZmlsbD0idXJsKCNsaW5lYXItZ3JhZGllbnQpIi8+DQo8L3N2Zz4NCg=="); }
   .footer__menu {
-    max-width: 530px;
+    display: flex;
+    flex-wrap: wrap;
+    /* max-width: 530px; */
     width: 100%;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
-    justify-content: space-between; }
+    justify-content: center; }
+    .footer__menu li {
+      margin-right: 30px; }
     .footer__menu li:last-child {
+      margin-right: 0;
       margin-bottom: 0; }
     .footer__menu li a {
       font-size: 18px;
@@ -2020,7 +2026,10 @@ input[type="checkbox"],
     flex-direction: column;
     -webkit-box-align: center;
     -ms-flex-align: center;
-    align-items: center; } }
+    align-items: center; } 
+  .footer__menu li {
+    margin-right: 0; }
+}
 
 @media (max-width: 440px) {
   .advantages-block__item {

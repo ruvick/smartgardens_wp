@@ -7,20 +7,12 @@
 
 			<div class="header__menu menu">
 				<nav class="menu__body">
-					<ul class="menu__list sibling-fade d-flex">
-						<li><a href="#" class="menu__link">Об устройстве</a></li>
-						<li><a href="#" class="menu__link">Преимущества</a></li>
-						<li><a href="#" class="menu__link">Аксессуары</a></li>
-						<li><a href="#" class="menu__link">Контакты</a></li>
-					</ul>
+					<?php wp_nav_menu( array('theme_location' => 'menu-1','menu_class' => 'menu__list ',
+						'container_class' => 'menu__list ','container' => false )); ?> 
 				</nav>
 				<nav class="mob-menu">
-					<ul class="mob-menu__list">
-						<li><a href="#" class="menu__link">Об устройстве</a></li>
-						<li><a href="#" class="menu__link">Преимущества</a></li>
-						<li><a href="#" class="menu__link">Аксессуары</a></li>
-						<li><a href="#" class="menu__link">Контакты</a></li>
-					</ul>
+					<?php wp_nav_menu( array('theme_location' => 'menu-1','menu_class' => 'mob-menu__list ',
+						'container_class' => 'mob-menu__list ','container' => false )); ?> 
 				</nav>
 
 			</div>
