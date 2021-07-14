@@ -13,18 +13,18 @@
  * @package light_market
  */
 
-get_header(); ?>
+get_header(); ?> 
 
 <?php get_template_part('template-parts/header-section');?>
 
-	<main id="primary" class="page site-main"> 
+	<main id="primary" class="page"> 
 
 		<section class="content"> 
 			<div class="container">
 
 			<?php
 			if ( function_exists('yoast_breadcrumb') ) {
-				yoast_breadcrumb( '<p id="breadcrumbs">','</p>' );
+				yoast_breadcrumb( '<p id="breadcrumbs">','</p>' ); 
 			}
 			?> 
 
