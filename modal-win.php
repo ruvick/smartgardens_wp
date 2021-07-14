@@ -6,7 +6,7 @@
 		<div class="popup__body">
 			<div class="popup__close"></div>
 			<div class="popup__item d-flex">
-				<img src="img/popup-img.jpg" alt=""> 
+				<img src="<?php echo get_template_directory_uri();?>/img/popup-img.jpg" alt=""> 
 				<div class="popup__form-block">
 					<h2>Заказать звонок</h2>
 					<form action="#" class="popup__form">
