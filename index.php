@@ -105,7 +105,7 @@
 
 					</div>
 
-					<div class="advantages-block">
+					<div id="advant" class="advantages-block">
 						<h2>Преимущества</h2>
 
 						<div class="advantages-block__row d-flex">
