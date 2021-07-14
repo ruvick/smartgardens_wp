@@ -1,6 +1,6 @@
 <?php
 
-define("COMPANY_NAME", "АВТОМОБИЛЬНЫЕ СИДЕНЬЯ");
+define("COMPANY_NAME", "SMARTGARDENS");
 define("MAIL_RESEND", "noreply@ultrakresla.ru");
 
 //----Подключене carbon fields
@@ -117,7 +117,7 @@ add_action( 'wp_enqueue_scripts', 'my_assets' );
 
 			
 		} else {
-			wp_die( 'НО-НО-НО!', '', 403 );
+			wp_die( 'НО-НО-НО!', '', 403 ); 
 		}
 	}
 	
@@ -320,7 +320,7 @@ add_action( 'wp_ajax_nopriv_sendphone', 'sendphone' );
       );
     
       add_filter('wp_mail_content_type', create_function('', 'return "text/html";'));
-       if (wp_mail(carbon_get_theme_option( 'as_email_send' ), 'Заказ звонка', '<strong>Имя:</strong> '.$_REQUEST["name"]. ' <br/> <strong>Телефон:</strong> '.$_REQUEST["tel"], $headers))
+       if (wp_mail(carbon_get_theme_option( 'as_email_send' ), 'Заказ звонка', '<strong>Имя:</strong> '.$_REQUEST["name"]. ' <br/> <strong>Телефон:</strong> '.$_REQUEST["tel"]. ' <br/> <strong>Email:</strong> '.$_REQUEST["email"], $headers))
         wp_die("<span style = 'color:green;'>Мы свяжемся с Вами в ближайшее время.</span>");
       else wp_die("<span style = 'color:red;'>Сервис недоступен попробуйте позднее.</span>"); 
       

@@ -316,14 +316,15 @@ jQuery("input[type=tel]").inputmask(inputmask_phone);
 
 
 //Валидация + Отправщик
-$('.newButton').click(function (e) {
+$('.popup__form-btn').click(function (e) {
 
 	e.preventDefault();
-	var name = $("#form-question-name").val();
-	var tel = $("#form-question-tel").val();
+	const name = $("#form-callback-name").val();
+	const tel = $("#form-callback-tel").val();
+	const email = $("#form-callback-email").val();
 
-	if (jQuery("#form-question-tel").val() == "") {
-		jQuery("#form-question-tel").css("border", "1px solid red");
+	if (jQuery("#form-callback-tel").val() == "") {
+		jQuery("#form-callback-tel").css("border", "1px solid red");
 		return;
 	}
 
@@ -340,6 +341,7 @@ $('.newButton').click(function (e) {
 				nonce: allAjax.nonce,
 				name: name,
 				tel: tel,
+				email: email,
 			}
 		);
 

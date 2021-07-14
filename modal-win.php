@@ -10,11 +10,11 @@
 				<div class="popup__form-block">
 					<h2>Заказать звонок</h2>
 					<form action="#" class="popup__form">
-						<input type="text" name="name" placeholder="Имя" class="popup__form-input input">
-						<input type="tel" name="tel" placeholder="Телефон*" class="popup__form-input input">
-						<input type="text" name="email" placeholder="Email" class="popup__form-input input">
+						<input type="text" name="name" placeholder="Имя" id="form-callback-name" class="popup__form-input input">
+						<input type="tel" name="tel" placeholder="Телефон*" id="form-callback-tel" class="popup__form-input input">
+						<input type="text" name="email" placeholder="Email" id="form-callback-email" class="popup__form-input input">
 						<button class="popup__form-btn btn">Заказать</button>
-					</form>
+					</form> 
 				</div>
 			</div>
 		</div>

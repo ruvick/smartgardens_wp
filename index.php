@@ -20,7 +20,7 @@
 								Выращивайте свежую зелень прямо у себя дома <br>
 								вне зависимости от времени года и погоды на улице
 							</p>
-							<button class="first__btn btn">В КОРЗИНУ</button>
+							<button class="first__btn btn">ПОДРОБНЕЕ</button>
 						</div>
 						<div class="first__slider">
 							<div class="first__slider-img">
