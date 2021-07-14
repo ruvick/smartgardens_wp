@@ -9,7 +9,7 @@
 					<div class="first__flex-block d-flex">
 						<div class="first__descrip">
 							<h1>
-								Гидропонная установка <br>
+								Гидропонная установка <br> 
 								у вас дома
 							</h1>
 							<div class="first__price-block d-flex">
