@@ -5,21 +5,21 @@ define("MAIL_RESEND", "noreply@ultrakresla.ru");
 
 //----Подключене carbon fields
 //----Инструкции по подключению полей см. в комментариях themes-fields.php
-// include "carbon-fields/carbon-fields-plugin.php";
+include "carbon-fields/carbon-fields-plugin.php";
 
-// use Carbon_Fields\Container;
-// use Carbon_Fields\Field;
+use Carbon_Fields\Container;
+use Carbon_Fields\Field;
 
-// add_action( 'carbon_fields_register_fields', 'crb_attach_theme_options' ); 
-// function crb_attach_theme_options() {
-// 	require_once __DIR__ . "/themes-fields.php";
-// }
+add_action( 'carbon_fields_register_fields', 'crb_attach_theme_options' ); 
+function crb_attach_theme_options() {
+	require_once __DIR__ . "/themes-fields.php";
+}
 
-// add_action( 'after_setup_theme', 'crb_load' );
-// function crb_load() {
-// 	require_once( 'carbon-fields/vendor/autoload.php' );
-// 	\Carbon_Fields\Carbon_Fields::boot();
-// }
+add_action( 'after_setup_theme', 'crb_load' );
+function crb_load() {
+	require_once( 'carbon-fields/vendor/autoload.php' );
+	\Carbon_Fields\Carbon_Fields::boot();
+}
 
 //-----Блок описания вывода меню
 // 1. Осмысленные названия для алиаса и для описания на русском.

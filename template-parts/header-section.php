@@ -20,7 +20,7 @@
 			<div class="header__contacts">
 
 				<div class="header__callback d-flex">
-					<a href="tel:88004882222">8 800 488 22 22</a>
+					<a href="tel:<? echo preg_replace('/[^0-9]/', '', $tel); ?>"><? echo $tel = carbon_get_theme_option("as_phones_1"); ?></a>
 					<a href="#callback" class="header__popup-link _popup-link">ЗАКАЗАТЬ ЗВОНОК</a>
 				</div>
 				<a href="tel:88004882222" class="mob-callback__phone"></a>
