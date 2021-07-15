@@ -78,16 +78,22 @@ Container::make( 'theme_options', __( 'Настройки темы', 'crb' ) )
     ) );
     Container::make('post_meta', 'ultra_product_cr', 'Характеристики товара')
     ->show_on_post_type(array( 'ultra'))
-      ->add_fields(array(   
+      ->add_fields(array(
+      Field::make( 'complex', 'offer_picture', "Галерея товара" )
+        ->add_fields( array(
+        Field::make('image', 'gal_img', 'Изображение' )->set_width(30),
+        Field::make('text', 'gal_img_sku', 'ID для модификации')->set_width(30),
+        Field::make('text', 'gal_img_alt', 'alt и title')->set_width(30)        
+      ) ),   
       Field::make('textarea', 'offer_smile_descr', 'Краткое описание')->set_width(100),
+      Field::make('rich_text', 'prod_descrip', 'Описание товара')->set_width(100),
       // Field::make('text', 'offer_weight', 'Вес')->set_width(50),
       // Field::make('text', 'offer_sticker', 'Стикер')->set_width(50), 
       Field::make('text', 'offer_price', 'Цена')->set_width(50),
       Field::make('text', 'old_price', 'Старая цена')->set_width(50),
-      Field::make('text', 'offer_number', 'Колличество')->set_width(50),
-      // Field::make('text', 'offer_sku', 'Артикул (Базовый)')->set_width(50),
+      // Field::make('text', 'offer_number', 'Колличество')->set_width(50),
+      Field::make('text', 'offer_sku', 'Артикул (Базовый)')->set_width(50),
       // Field::make('text', 'offer_benefit', 'Выгода')->set_width(50),
-      Field::make('rich_text', 'prod_descrip', 'Описание товара')->set_width(100),
       // Field::make('text', 'offer_calories', 'Калории')->set_width(50),
       // Field::make('text', 'offer_protein', 'Белки')->set_width(50),
       // Field::make('text', 'offer_fats', 'Жиры')->set_width(50),
@@ -115,13 +121,6 @@ Container::make( 'theme_options', __( 'Настройки темы', 'crb' ) )
       //   Field::make('text', 'mod_old_price', 'Старая цена модификации')->set_width(20),
       //   Field::make('text', 'mod_picture_id', 'Изображения модификации')->set_width(20),
       // ) ),
-        
-      Field::make( 'complex', 'offer_picture', "Галерея товара" )
-      ->add_fields( array(
-        Field::make('image', 'gal_img', 'Изображение' )->set_width(30),
-        Field::make('text', 'gal_img_sku', 'ID для модификации')->set_width(30),
-        Field::make('text', 'gal_img_alt', 'alt и title')->set_width(30)        
-      ) ),
 
     //   Field::make('complex', 'complex_analogs', 'Ближайшие аналоги')
     //     ->set_max(4) // Можно будет выбрать только 5 постов
