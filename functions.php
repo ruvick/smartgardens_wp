@@ -19,7 +19,7 @@ add_action( 'after_setup_theme', 'crb_load' );
 function crb_load() {
 	require_once( 'carbon-fields/vendor/autoload.php' );
 	\Carbon_Fields\Carbon_Fields::boot();
-}
+} 
 
 //-----Блок описания вывода меню
 // 1. Осмысленные названия для алиаса и для описания на русском.
@@ -175,132 +175,132 @@ add_action( 'wp_enqueue_scripts', 'my_assets' );
 
 // // Регистрация кастомного поста
 
-// add_action( 'init', 'create_taxonomies' );
+add_action( 'init', 'create_taxonomies' );
 
-// function create_taxonomies(){
+function create_taxonomies(){
 
-// 	register_taxonomy('ultracat', array('ultra'), array(
-// 		'hierarchical'  => true,
-// 		'labels'        => array(
-// 			'name'              => "Категория товара",
-// 			'singular_name'     => "Категория товара",
-// 			'search_items'      => "Найти категорию товара",
-// 			'all_items'         => __( 'Все категории' ),
-// 			'parent_item'       => __( 'Дочерние категории' ),
-// 			'parent_item_colon' => __( 'Дочерние категории:' ),
-// 			'edit_item'         => __( 'Редактировать категорию' ),
-// 			'update_item'       => __( 'Обновить категорию' ),
-// 			'add_new_item'      => __( 'Добавить новую категорию товара' ),
-// 			'new_item_name'     => __( 'Имя новой категории товара' ),
-// 			'menu_name'         => __( 'Категории товара' ),
-// 		),
-// 		'description' => "Категория товаров для магазина",
-// 		'public' => true,
-// 		'show_ui'       => true,
-// 		'query_var'     => true,
-// 		'show_in_rest'  => true,
-// 		'show_admin_column'     => true,
-// 	));
+	register_taxonomy('ultracat', array('ultra'), array(
+		'hierarchical'  => true,
+		'labels'        => array(
+			'name'              => "Категория товара",
+			'singular_name'     => "Категория товара",
+			'search_items'      => "Найти категорию товара",
+			'all_items'         => __( 'Все категории' ),
+			'parent_item'       => __( 'Дочерние категории' ),
+			'parent_item_colon' => __( 'Дочерние категории:' ),
+			'edit_item'         => __( 'Редактировать категорию' ),
+			'update_item'       => __( 'Обновить категорию' ),
+			'add_new_item'      => __( 'Добавить новую категорию товара' ),
+			'new_item_name'     => __( 'Имя новой категории товара' ),
+			'menu_name'         => __( 'Категории товара' ),
+		),
+		'description' => "Категория товаров для магазина",
+		'public' => true,
+		'show_ui'       => true,
+		'query_var'     => true,
+		'show_in_rest'  => true,
+		'show_admin_column'     => true,
+	));
 
-// 	register_taxonomy('ultrastyle', array('ultra'), array(
-// 		'hierarchical'  => false,
-// 		'labels'        => array(
-// 			'name'              => "Стиль дизайна",
-// 			'singular_name'     => "Стиль дизайна",
-// 			'search_items'      => "Найти стиль",
-// 			'all_items'         => __( 'Все стили' ),
-// 			'parent_item'       => __( 'Дочерние стили' ),
-// 			'parent_item_colon' => __( 'Дочерние стили:' ),
-// 			'edit_item'         => __( 'Редактировать стиль' ),
-// 			'update_item'       => __( 'Обновить стиль' ),
-// 			'add_new_item'      => __( 'Добавить новый стиль' ),
-// 			'new_item_name'     => __( 'Имя новго стиля товара' ),
-// 			'menu_name'         => __( 'Стили товара' ),
-// 		),
-// 		'description' => "Стиль дизайна товаров",
-// 		'public' => true,
-// 		'show_ui'       => true,
-// 		'query_var'     => true,
-// 		'show_in_rest'  => true,
-// 		'show_admin_column'     => true,
-// 	));
-// }
+	register_taxonomy('ultrastyle', array('ultra'), array(
+		'hierarchical'  => false,
+		'labels'        => array(
+			'name'              => "Стиль дизайна",
+			'singular_name'     => "Стиль дизайна",
+			'search_items'      => "Найти стиль",
+			'all_items'         => __( 'Все стили' ),
+			'parent_item'       => __( 'Дочерние стили' ),
+			'parent_item_colon' => __( 'Дочерние стили:' ),
+			'edit_item'         => __( 'Редактировать стиль' ),
+			'update_item'       => __( 'Обновить стиль' ),
+			'add_new_item'      => __( 'Добавить новый стиль' ),
+			'new_item_name'     => __( 'Имя новго стиля товара' ),
+			'menu_name'         => __( 'Стили товара' ),
+		),
+		'description' => "Стиль дизайна товаров",
+		'public' => true,
+		'show_ui'       => true,
+		'query_var'     => true,
+		'show_in_rest'  => true,
+		'show_admin_column'     => true,
+	));
+}
 
 
-// add_action('init', 'ultra_custom_init');
+add_action('init', 'ultra_custom_init');
 
-// function ultra_custom_init(){
-// 	register_post_type('ultra', array(
-// 		'labels'             => array(
-// 			'name'               => 'Продукты', // Основное название типа записи
-// 			'singular_name'      => 'Продукты', // отдельное название записи типа Book
-// 			'add_new'            => 'Добавить новый',
-// 			'add_new_item'       => 'Добавить новый товар',
-// 			'edit_item'          => 'Редактировать товар',
-// 			'new_item'           => 'Новый товар',
-// 			'view_item'          => 'Посмотреть товар',
-// 			'search_items'       => 'Найти товар',
-// 			'not_found'          =>  'Товаров не найдено',
-// 			'not_found_in_trash' => 'В корзине товаров не найдено',
-// 			'parent_item_colon'  => '',
-// 			'menu_name'          => 'Товары'
+function ultra_custom_init(){
+	register_post_type('ultra', array(
+		'labels'             => array(
+			'name'               => 'Продукты', // Основное название типа записи
+			'singular_name'      => 'Продукты', // отдельное название записи типа Book
+			'add_new'            => 'Добавить новый',
+			'add_new_item'       => 'Добавить новый товар',
+			'edit_item'          => 'Редактировать товар',
+			'new_item'           => 'Новый товар',
+			'view_item'          => 'Посмотреть товар',
+			'search_items'       => 'Найти товар',
+			'not_found'          =>  'Товаров не найдено',
+			'not_found_in_trash' => 'В корзине товаров не найдено',
+			'parent_item_colon'  => '',
+			'menu_name'          => 'Товары'
 
-// 		  ),
-// 		'taxonomies' => array('ultracat'), 
-// 		'public'             => true,
-// 		'publicly_queryable' => true,
-// 		'show_ui'            => true,
-// 		'show_in_menu'       => true,
-// 		'query_var'          => true,
-// 		'rewrite'            => true,
-// 		'capability_type'    => 'post',
-// 		'has_archive'        => true,
-// 		'show_admin_column'        => true,
-// 		'show_in_quick_edit'        => true,
-// 		'hierarchical'       => false,
-// 		'menu_position'      => 5,
-// 		'supports'           => array('title','editor','author','thumbnail','excerpt','trackbacks','custom-fields','comments','revisions','page-attributes','post-formats')
-// 	) );
-// }
+		  ),
+		'taxonomies' => array('ultracat'), 
+		'public'             => true,
+		'publicly_queryable' => true,
+		'show_ui'            => true,
+		'show_in_menu'       => true,
+		'query_var'          => true,
+		'rewrite'            => true,
+		'capability_type'    => 'post',
+		'has_archive'        => true,
+		'show_admin_column'        => true,
+		'show_in_quick_edit'        => true,
+		'hierarchical'       => false,
+		'menu_position'      => 5,
+		'supports'           => array('title','editor','author','thumbnail','excerpt','trackbacks','custom-fields','comments','revisions','page-attributes','post-formats')
+	) );
+}
 
 // // Колонки в таблицу админки
 
-// add_filter('manage_posts_columns', 'posts_columns', 5);
-// add_action('manage_posts_custom_column', 'posts_custom_columns', 5, 2);
+add_filter('manage_posts_columns', 'posts_columns', 5);
+add_action('manage_posts_custom_column', 'posts_custom_columns', 5, 2);
  
-// function posts_columns($defaults){
-//     $defaults['riv_post_sku'] = __('Артикул');
-// 	$defaults['riv_post_thumbs'] = __('Миниатюра');
-// 	$defaults['riv_post_price'] = __('Цена');
-// 	return $defaults;
-// }
+function posts_columns($defaults){
+    $defaults['riv_post_sku'] = __('Артикул');
+	$defaults['riv_post_thumbs'] = __('Миниатюра');
+	$defaults['riv_post_price'] = __('Цена');
+	return $defaults;
+}
  
-// function posts_custom_columns($column_name, $id){
+function posts_custom_columns($column_name, $id){
 	
 	
-// 	if($column_name === 'riv_post_sku'){
-// 		$SKU_t = get_post_meta(get_the_ID(), "_offer_sku", true);
-// 		echo empty($SKU_t)?"-":$SKU_t;
-// 	}
+	if($column_name === 'riv_post_sku'){
+		$SKU_t = get_post_meta(get_the_ID(), "_offer_sku", true);
+		echo empty($SKU_t)?"-":$SKU_t;
+	}
 	
-// 	if($column_name === 'riv_post_thumbs'){	
-// 		$img1 = get_the_post_thumbnail_url( get_the_ID(), "thumbnail");
+	if($column_name === 'riv_post_thumbs'){	
+		$img1 = get_the_post_thumbnail_url( get_the_ID(), "thumbnail");
 		
-// 		if (empty($img1))
-// 			$img1 = get_bloginfo("template_url")."/img/no-photo.jpg";
+		if (empty($img1))
+			$img1 = get_bloginfo("template_url")."/img/no-photo.jpg";
 		
-// 		echo '<img width = "60" src = "'.$img1.'" />';
+		echo '<img width = "60" src = "'.$img1.'" />';
 			
 	
-// 	}
+	}
 	
-// 	if($column_name === 'riv_post_price'){
-// 		$PRICE = get_post_meta(get_the_ID(), "_offer_price", true);
-// 		echo empty($PRICE)?"0 руб.":$PRICE." руб.";
-// 	}
+	if($column_name === 'riv_post_price'){
+		$PRICE = get_post_meta(get_the_ID(), "_offer_price", true);
+		echo empty($PRICE)?"0 руб.":$PRICE." руб.";
+	}
 	
 	
-// }
+}
 
 
 // Отправка формы из модального окна

@@ -20,7 +20,7 @@
 								Выращивайте свежую зелень прямо у себя дома <br>
 								вне зависимости от времени года и погоды на улице
 							</p>
-							<button class="first__btn btn">ПОДРОБНЕЕ</button>
+							<a href="<?php echo get_category_link(22);?>" class="first__btn btn">ПОДРОБНЕЕ</a>
 						</div>
 						<div class="first__slider">
 							<div class="first__slider-img">
@@ -142,95 +142,26 @@
 
 					<div class="prod-card d-flex">
 
-						<div class="prod-card__body d-flex">
-							<a href="#" class="prod-card__link">
-								<img src="<?php echo get_template_directory_uri();?>/img/product/01.jpg" alt="">
-							</a>
-							<div class="prod-card__text">
-								<a href="#">
-									<h4>Пробки для сеянцев в кассетах</h4>
-								</a>
-							</div>
-							<div class="prod-card__price-item d-flex">
-								<p class="prod-card__price">550 руб.</p>
-								<button class="prod-card__btn btn">В КОРЗИНУ</button>
-							</div>
-						</div>
+						<?
+							$args = array(
+							'posts_per_page' => 6,
+							'post_type' => 'ultra',
+							'tax_query' => array(
+								array(
+									'taxonomy' => 'ultracat',
+									'field' => 'id',
+									'terms' => array(3)
+									)
+								)
+							);
+							$query = new WP_Query($args);
 
-						<div class="prod-card__body d-flex">
-							<a href="#" class="prod-card__link">
-								<img src="<?php echo get_template_directory_uri();?>/img/product/02.jpg" alt="">
-							</a>
-							<div class="prod-card__text">
-								<a href="#">
-									<h4>Кокосовый торф в блоках 5 кг</h4>
-								</a>
-							</div>
-							<div class="prod-card__price-item d-flex">
-								<p class="prod-card__price">760 руб.</p>
-								<button class="prod-card__btn btn">В КОРЗИНУ</button>
-							</div>
-						</div>
-
-						<div class="prod-card__body d-flex">
-							<a href="#" class="prod-card__link">
-								<img src="<?php echo get_template_directory_uri();?>/img/product/03.jpg" alt="">
-							</a>
-							<div class="prod-card__text">
-								<a href="#">
-									<h4>Кубик для рассады томатов</h4>
-								</a>
-							</div>
-							<div class="prod-card__price-item d-flex">
-								<p class="prod-card__price">90 руб.</p>
-								<button class="prod-card__btn btn">В КОРЗИНУ</button>
-							</div>
-						</div>
-
-						<div class="prod-card__body d-flex">
-							<a href="#" class="prod-card__link">
-								<img src="<?php echo get_template_directory_uri();?>/img/product/03.jpg" alt="">
-							</a>
-							<div class="prod-card__text">
-								<a href="#">
-									<h4>Кубик для рассады томатов</h4>
-								</a>
-							</div>
-							<div class="prod-card__price-item d-flex">
-								<p class="prod-card__price">90 руб.</p>
-								<button class="prod-card__btn btn">В КОРЗИНУ</button>
-							</div>
-						</div>
-
-						<div class="prod-card__body d-flex">
-							<a href="#" class="prod-card__link">
-								<img src="<?php echo get_template_directory_uri();?>/img/product/01.jpg" alt="">
-							</a>
-							<div class="prod-card__text">
-								<a href="#">
-									<h4>Пробки для сеянцев в кассетах</h4>
-								</a>
-							</div>
-							<div class="prod-card__price-item d-flex">
-								<p class="prod-card__price">550 руб.</p>
-								<button class="prod-card__btn btn">В КОРЗИНУ</button>
-							</div>
-						</div>
-
-						<div class="prod-card__body d-flex">
-							<a href="#" class="prod-card__link">
-								<img src="<?php echo get_template_directory_uri();?>/img/product/02.jpg" alt="">
-							</a>
-							<div class="prod-card__text">
-								<a href="#">
-									<h4>Кокосовый торф в блоках 5 кг</h4>
-								</a>
-							</div>
-							<div class="prod-card__price-item d-flex">
-								<p class="prod-card__price">760 руб.</p>
-								<button class="prod-card__btn btn">В КОРЗИНУ</button>
-							</div>
-						</div>
+								foreach( $query->posts as $post ){
+								$query->the_post();
+								get_template_part('template-parts/product-elem');
+							}  
+							wp_reset_postdata();
+						?>
 
 					</div>
 
