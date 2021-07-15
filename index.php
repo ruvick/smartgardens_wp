@@ -1,4 +1,12 @@
-<?php get_header(); ?>
+<?php get_header(); 
+
+/*
+Template Name: Шаблон карточки товаров
+WP Post Template: Шаблон карточки товаров
+Template Post Type: post
+*/ 
+
+?>
 
 <?php get_template_part('template-parts/header-section');?>
 
@@ -9,7 +17,7 @@
 					<div class="first__flex-block d-flex">
 						<div class="first__descrip">
 							<h1>
-								Гидропонная установка <br> 
+								Гидропонная установка <br>  
 								у вас дома
 							</h1>
 							<div class="first__price-block d-flex">
@@ -20,7 +28,7 @@
 								Выращивайте свежую зелень прямо у себя дома <br>
 								вне зависимости от времени года и погоды на улице
 							</p>
-							<a href="<?php echo get_category_link(22);?>" class="first__btn btn">ПОДРОБНЕЕ</a>
+							<a href="<?php echo get_permalink(22);?>" class="first__btn btn">ПОДРОБНЕЕ</a>
 						</div>
 						<div class="first__slider">
 							<div class="first__slider-img">
