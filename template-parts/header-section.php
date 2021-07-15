@@ -13,6 +13,7 @@
 				<nav class="mob-menu">
 					<?php wp_nav_menu( array('theme_location' => 'menu-1','menu_class' => 'mob-menu__list ',
 						'container_class' => 'mob-menu__list ','container' => false )); ?> 
+						<a href="#callback" class="header__popup-link _popup-link">ЗАКАЗАТЬ ЗВОНОК</a> 
 				</nav>
 
 			</div>
