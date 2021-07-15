@@ -2,7 +2,7 @@
 
 <?php get_template_part('template-parts/header-section');?>
 
-<main class="page">
+<main class="page single">
 			<section id="first" class="first">
 				<div class="container">
 
@@ -16,13 +16,10 @@
 						<div class="first__descrip">
 							<h1><?the_title();?></h1>
 							<div class="first__price-block d-flex">
-								<div class="first__price-old">5500 <span>руб.</span></div>
+								<div class="first__price-old"><?echo carbon_get_post_meta(get_the_ID(),"old_price"); ?> <span>руб.</span></div>
 								<div class="first__price-new"><?echo carbon_get_post_meta(get_the_ID(),"offer_price"); ?> <span>руб.</span></div>
 							</div>
-							<p>
-								Выращивайте свежую зелень прямо у себя дома <br>
-								вне зависимости от времени года и погоды на улице
-							</p>
+							<p><?echo carbon_get_post_meta(get_the_ID(),"offer_smile_descr"); ?></p>
 							<button class="first__btn btn" id = "btn__to-card" onclick = "add_tocart(this, 0); return false;"
                 data-price = "<?echo carbon_get_post_meta(get_the_ID(),"offer_price"); ?>"
 	              data-sku = "<? echo carbon_get_post_meta(get_the_ID(),"offer_sku")?>"
@@ -36,18 +33,24 @@
               </button>
 						</div>
 						<div class="first__slider">
-							<div class="first__slider-img">
-								<img src="<?php echo get_template_directory_uri();?>/img/slider-product/sl-prod-01.png" alt="">
-								<img src="<?php echo get_template_directory_uri();?>/img/shadow-sl.png" alt="">
-							</div>
-							<div class="first__slider-img">
-								<img src="<?php echo get_template_directory_uri();?>/img/slider-product/sl-prod-01.png" alt="">
-								<img src="<?php echo get_template_directory_uri();?>/img/shadow-sl.png" alt="">
-							</div>
-							<div class="first__slider-img">
-								<img src="<?php echo get_template_directory_uri();?>/img/slider-product/sl-prod-01.png" alt="">
-								<img src="<?php echo get_template_directory_uri();?>/img/shadow-sl.png" alt="">
-							</div>
+						<?
+						$pict = carbon_get_the_post_meta('offer_picture');
+						if($pict) {
+							$pictIndex = 0;
+							foreach($pict as $item) {
+								?>
+									<div class="first__slider-img">
+										<img
+											id = "pict-<? echo empty($item['gal_img_sku'])?$pictIndex:$item['gal_img_sku']; ?>" 
+											alt = "<? echo $item['gal_img_alt']; ?>"
+											title = "<? echo $item['gal_img_alt']; ?>"
+											src = "<?php echo wp_get_attachment_image_src($item['gal_img'], 'full')[0];?>" />
+									</div>
+								<?
+								$pictIndex++;
+							}
+						}
+						?>
 						</div>
 					</div>
 				</div>
@@ -59,65 +62,7 @@
 				<img src="<?php echo get_template_directory_uri();?>/img/sheet-03.png" class="about-bg-3" alt="">
 				<div class="container">
 					<h2>Описание</h2>
-					<p>
-						Мы предлагаем Вашему вниманию стационарную гидропонную установку для выращивания зелени в домашних условиях.
-						Установка проста в эксплуатации и не требует специфических навыков при использовании. В установке
-						предусмотрено 12 ячеек для выращивания растений, имеются все необходимые режимы освещения с автоматической
-						регулировкой. Блок светодиодных ламп вынесены на штангу с регулировкой уровня 50 см. Установка снабжена
-						насосом для обеспечения циркуляции жидкости внутри бака, который в свою очередь снабжен буйком для индикации
-						уровня.
-					</p>
-					<h3>Технические характеристики</h3>
-
-					<div class="about__charact charact__row">
-
-						<div class="charact__line d-flex">
-							<div class="charact__tab d-flex">
-								<div class="charact__value">Мощность</div>
-								<div class="charact__property">60 Вт</div>
-							</div>
-							<div class="charact__tab d-flex">
-								<div class="charact__value">Индекс цветопередачи</div>
-								<div class="charact__property">80 Ra</div>
-							</div>
-							<div class="charact__tab d-flex">
-								<div class="charact__value">Поддержка димера</div>
-								<div class="charact__property">Да</div>
-							</div>
-						</div>
-
-						<div class="charact__line d-flex">
-							<div class="charact__tab d-flex">
-								<div class="charact__value">Напряжение</div>
-								<div class="charact__property">110 В - 240 В</div>
-							</div>
-							<div class="charact__tab d-flex">
-								<div class="charact__value">Световой поток</div>
-								<div class="charact__property">23029 Лм</div>
-							</div>
-							<div class="charact__tab d-flex">
-								<div class="charact__value">Материал корпуса</div>
-								<div class="charact__property">Алюминий</div>
-							</div>
-						</div>
-
-						<div class="charact__line d-flex">
-							<div class="charact__tab d-flex">
-								<div class="charact__value">Сертификация</div>
-								<div class="charact__property">Ce, ETL, FCC, RoHS</div>
-							</div>
-							<div class="charact__tab d-flex">
-								<div class="charact__value">Количество светодиодов</div>
-								<div class="charact__property">120</div>
-							</div>
-							<div class="charact__tab d-flex">
-								<div class="charact__value">Цвета светодиодов</div>
-								<div class="charact__property">2835 белый + красный + синий</div>
-							</div>
-						</div>
-
-					</div>
-
+					<p><?php the_content(); ?></p>
 				</div>
 			</section>
 
@@ -135,7 +80,7 @@
 								array(
 									'taxonomy' => 'ultracat',
 									'field' => 'id',
-									'terms' => array(3)
+									'terms' => array(4)
 									)
 								)
 							);

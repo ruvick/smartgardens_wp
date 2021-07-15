@@ -80,21 +80,18 @@ Container::make( 'theme_options', __( 'Настройки темы', 'crb' ) )
     ->show_on_post_type(array( 'ultra'))
       ->add_fields(array(   
       Field::make('textarea', 'offer_smile_descr', 'Краткое описание')->set_width(100),
-      // Field::make('text', 'offer_name', 'Название товара')->set_width(30),
-      // Field::make('text', 'offer_label', 'Метка на товаре')->set_width(30),
-      Field::make('text', 'offer_weight', 'Вес')->set_width(50),
-      // Field::make('text', 'offer_allsearch', 'Все артикулы для поиска')->set_width(50),
-      // Field::make('text', 'offer_siries', 'Серия (для сопутствующих)')->set_width(30),
-      Field::make('text', 'offer_sticker', 'Стикер')->set_width(50), 
+      // Field::make('text', 'offer_weight', 'Вес')->set_width(50),
+      // Field::make('text', 'offer_sticker', 'Стикер')->set_width(50), 
       Field::make('text', 'offer_price', 'Цена')->set_width(50),
+      Field::make('text', 'old_price', 'Старая цена')->set_width(50),
       Field::make('text', 'offer_number', 'Колличество')->set_width(50),
-      Field::make('text', 'offer_sku', 'Артикул (Базовый)')->set_width(50),
+      // Field::make('text', 'offer_sku', 'Артикул (Базовый)')->set_width(50),
       // Field::make('text', 'offer_benefit', 'Выгода')->set_width(50),
       Field::make('rich_text', 'prod_descrip', 'Описание товара')->set_width(100),
-      Field::make('text', 'offer_calories', 'Калории')->set_width(50),
-      Field::make('text', 'offer_protein', 'Белки')->set_width(50),
-      Field::make('text', 'offer_fats', 'Жиры')->set_width(50),
-      Field::make('text', 'offer_carbohyd', 'Углеводы')->set_width(50),
+      // Field::make('text', 'offer_calories', 'Калории')->set_width(50),
+      // Field::make('text', 'offer_protein', 'Белки')->set_width(50),
+      // Field::make('text', 'offer_fats', 'Жиры')->set_width(50),
+      // Field::make('text', 'offer_carbohyd', 'Углеводы')->set_width(50),
 
       // Field::make( 'complex', 'offer_cherecter', "Характеристики товара табы, левая колонка" )
       // ->add_fields( array(
