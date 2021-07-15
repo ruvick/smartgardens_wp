@@ -25,7 +25,7 @@
 				</div>
 				<a href="tel:88004882222" class="mob-callback__phone"></a>
 
-				<a href="#" class="bascket-icon"><span class="bascket-icon__number bascet_counter">0</span></a>
+				<a href="<?php echo get_permalink(20);?>" class="bascket-icon"><span class="bascket-icon__number bascet_counter">0</span></a> 
 
 			</div>
 

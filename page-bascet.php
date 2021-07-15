@@ -6,19 +6,6 @@
 
 get_header(); ?>
 
-<!-- События на кнопке -->
-<button class="btn btn__to-card" id = "btn__to-card" onclick = "add_tocart(this, 0); return false;"
-  data-price = "<?echo carbon_get_post_meta(get_the_ID(),"offer_price"); ?>"
-	data-sku = "<? echo carbon_get_post_meta(get_the_ID(),"offer_sku")?>"
-	data-size = ""
-  data-oldprice = "<? echo carbon_get_post_meta(get_the_ID(),"offer_old_price")?>"
-  data-lnk = "<? echo  get_the_permalink(get_the_ID());?>"
-  data-name = "<? echo  get_the_title();?>"
-  data-count = "1"
-  data-picture = "<?php echo wp_get_attachment_image_src($item['gal_img'], 'large')[0];?>">
-    Добавить в корзину
-</button> 
-
 <?php get_template_part('template-parts/header-section');?>
 
 <main class="main page">	
@@ -33,11 +20,13 @@ get_header(); ?>
 					}
 				?>  
 			</div>
+			
       <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
         <h1><?php the_title();?></h1>
         <?php the_content();?>
       <?php endwhile;?>
       <?php endif; ?>
+
 		</div>
 	</section>
 
