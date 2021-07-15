@@ -390,7 +390,7 @@ function send_cart() {
 		$headers = array(
 			'From: Сайт '.COMPANY_NAME.' <'.MAIL_RESEND.'>',
 			'content-type: text/html',
-		);
+		); 
 	
 		add_filter('wp_mail_content_type', create_function('', 'return "text/html";'));
 		
