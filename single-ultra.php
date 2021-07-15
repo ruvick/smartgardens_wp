@@ -28,7 +28,7 @@
                 data-lnk = "<? echo  get_the_permalink(get_the_ID());?>"
                 data-name = "<? echo  get_the_title();?>"
                 data-count = "1"
-                data-picture = "<?php echo wp_get_attachment_image_src($item['gal_img'], 'large')[0];?>">
+                data-picture = "<?php  $imgTm = get_the_post_thumbnail_url( get_the_ID(), "tominiatyre" ); echo empty($imgTm)?get_bloginfo("template_url")."/img/no-photo.jpg":$imgTm; ?>">
                 В КОРЗИНУ
               </button>
 						</div>
@@ -61,8 +61,8 @@
 				<img src="<?php echo get_template_directory_uri();?>/img/sheet-02.png" class="about-bg-2" alt="">
 				<img src="<?php echo get_template_directory_uri();?>/img/sheet-03.png" class="about-bg-3" alt="">
 				<div class="container">
-					<h2>Описание</h2>
-					<p><?php the_content(); ?></p>
+					<h2>Описание</h2> 
+					<p><?echo carbon_get_post_meta(get_the_ID(),"prod_descrip"); ?></p>
 				</div>
 			</section>
 

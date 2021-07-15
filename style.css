@@ -1418,6 +1418,9 @@ body.ie .ibg img {
   justify-content: center;
   width: 100%; }
 
+.single .first__slider .slick-dots {
+    bottom: -8%; }
+
 .first__slider .slick-dots li {
   width: 10px;
   height: 10px;
