@@ -8,7 +8,10 @@
 		</a>
 	</div>
 	<div class="prod-card__price-item d-flex">
-		<p class="prod-card__price"><?echo carbon_get_post_meta(get_the_ID(),"offer_price"); ?> руб.</p>
+	<? $price_new = carbon_get_post_meta(get_the_ID(),"offer_price");
+    if (!empty($price_new)) {?>
+			<p class="prod-card__price"><?echo $price_new;?> руб.</p>
+	<?}?>
 		<a href="<?echo get_the_permalink(get_the_ID());?>" class="prod-card__btn btn">ПОДРОБНЕЕ</a> 
 	</div>
 </div> 

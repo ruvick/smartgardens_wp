@@ -22,9 +22,10 @@
 					</div>
 				</div>
 			</div>
-		</div>
+		</div> 
 	</div>
 </div>
+<!-- Popup-JS End -->
 
 <div style="display: none;">
     <div class="box-modal" id="messgeModal">

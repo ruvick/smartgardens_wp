@@ -16,8 +16,14 @@
 						<div class="first__descrip">
 							<h1><?the_title();?></h1>
 							<div class="first__price-block d-flex">
-								<div class="first__price-old"><?echo carbon_get_post_meta(get_the_ID(),"old_price"); ?> <span>руб.</span></div>
-								<div class="first__price-new"><?echo carbon_get_post_meta(get_the_ID(),"offer_price"); ?> <span>руб.</span></div>
+							<? $price_old = carbon_get_post_meta(get_the_ID(),"old_price");
+    						if (!empty($price_old)) {?>
+								<div class="first__price-old"><?echo $price_old;?> <span>руб.</span></div>
+							<?}?>
+							<? $price_new = carbon_get_post_meta(get_the_ID(),"offer_price");
+    						if (!empty($price_new)) {?>
+								<div class="first__price-new"><?echo $price_new;?> <span>руб.</span></div>
+							<?}?>
 							</div>
 							<p><?echo carbon_get_post_meta(get_the_ID(),"offer_smile_descr"); ?></p>
 							<button class="first__btn btn" id = "btn__to-card" onclick = "add_tocart(this, 0); return false;"
@@ -61,8 +67,11 @@
 				<img src="<?php echo get_template_directory_uri();?>/img/sheet-02.png" class="about-bg-2" alt="">
 				<img src="<?php echo get_template_directory_uri();?>/img/sheet-03.png" class="about-bg-3" alt="">
 				<div class="container">
-					<h2>Описание</h2> 
-					<p><?echo carbon_get_post_meta(get_the_ID(),"prod_descrip"); ?></p>
+				<? $descrip = carbon_get_post_meta(get_the_ID(),"prod_descrip");
+    			if (!empty($descrip)) {?>
+						<h2>Описание</h2> 
+						<p><?echo $descrip;?></p>
+				<?}?>
 				</div>
 			</section>
 
