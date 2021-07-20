@@ -38,7 +38,7 @@
                 В КОРЗИНУ
               </button>
 						</div>
-						<div class="first__slider">
+						<div class="first__slider"> 
 						<?
 						$pict = carbon_get_the_post_meta('offer_picture');
 						if($pict) {

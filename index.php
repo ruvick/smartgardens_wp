@@ -33,15 +33,15 @@ Template Post Type: post
 						<div class="first__slider">
 							<div class="first__slider-img">
 								<img src="<?php echo get_template_directory_uri();?>/img/slider-product/sl-prod-01.png" alt="">
-								<img src="<?php echo get_template_directory_uri();?>/img/shadow-sl.png" alt="">
+								<!-- <img src="<?php echo get_template_directory_uri();?>/img/shadow-sl.png" alt=""> -->
 							</div>
 							<div class="first__slider-img">
-								<img src="<?php echo get_template_directory_uri();?>/img/slider-product/sl-prod-01.png" alt="">
-								<img src="<?php echo get_template_directory_uri();?>/img/shadow-sl.png" alt="">
+								<img src="<?php echo get_template_directory_uri();?>/img/slider-product/sl-prod-02.png" alt="">
+								<!-- <img src="<?php echo get_template_directory_uri();?>/img/shadow-sl.png" alt=""> -->
 							</div>
 							<div class="first__slider-img">
-								<img src="<?php echo get_template_directory_uri();?>/img/slider-product/sl-prod-01.png" alt="">
-								<img src="<?php echo get_template_directory_uri();?>/img/shadow-sl.png" alt="">
+								<img src="<?php echo get_template_directory_uri();?>/img/slider-product/sl-prod-03.png" alt="">
+								<!-- <img src="<?php echo get_template_directory_uri();?>/img/shadow-sl.png" alt=""> -->
 							</div>
 						</div>
 					</div>
