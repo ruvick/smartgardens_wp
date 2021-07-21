@@ -113,6 +113,13 @@ Template Post Type: post
 
 					</div>
 
+					<h3>Видеопрезентация</h3>
+					<a href="<?php echo get_template_directory_uri();?>/img/video/video.mp4" data-rel="media" class="about__link-video fancybox position">
+						<video class="about__video" controls="controls" loop autoplay muted poster="<?php echo get_template_directory_uri();?>/img/video/video.png">
+							<source src="<?php echo get_template_directory_uri();?>/img/video/video.mp4" type='video/ogg; codecs="theora, vorbis"'>
+						</video>
+					</a>
+
 					<div id="advant" class="advantages-block">
 						<h2>Преимущества</h2>
 

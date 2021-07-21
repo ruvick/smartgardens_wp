@@ -357,4 +357,6 @@ $('.popup__form-btn').click(function (e) {
 	}
 });
 
+$(".fancybox").fancybox();
+
 // }
