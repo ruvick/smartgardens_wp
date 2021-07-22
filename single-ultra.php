@@ -13,6 +13,28 @@
 			  ?> 
 
 					<div class="first__flex-block d-flex">
+
+					<div class="first__slider"> 
+						<?
+						$pict = carbon_get_the_post_meta('offer_picture');
+						if($pict) {
+							$pictIndex = 0;
+							foreach($pict as $item) {
+								?>
+									<div class="first__slider-img">
+										<img
+											id = "pict-<? echo empty($item['gal_img_sku'])?$pictIndex:$item['gal_img_sku']; ?>" 
+											alt = "<? echo $item['gal_img_alt']; ?>"
+											title = "<? echo $item['gal_img_alt']; ?>"
+											src = "<?php echo wp_get_attachment_image_src($item['gal_img'], 'full')[0];?>" />
+									</div>
+								<?
+								$pictIndex++;
+							}
+						}
+						?>
+						</div>
+						
 						<div class="first__descrip">
 							<h1><?the_title();?></h1>
 							<div class="first__price-block d-flex">
@@ -38,27 +60,9 @@
                 В КОРЗИНУ
               </button>
 						</div>
-						<div class="first__slider"> 
-						<?
-						$pict = carbon_get_the_post_meta('offer_picture');
-						if($pict) {
-							$pictIndex = 0;
-							foreach($pict as $item) {
-								?>
-									<div class="first__slider-img">
-										<img
-											id = "pict-<? echo empty($item['gal_img_sku'])?$pictIndex:$item['gal_img_sku']; ?>" 
-											alt = "<? echo $item['gal_img_alt']; ?>"
-											title = "<? echo $item['gal_img_alt']; ?>"
-											src = "<?php echo wp_get_attachment_image_src($item['gal_img'], 'full')[0];?>" />
-									</div>
-								<?
-								$pictIndex++;
-							}
-						}
-						?>
-						</div>
+
 					</div>
+
 				</div>
 			</section>
 
