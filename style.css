@@ -1405,11 +1405,16 @@ body.ie .ibg img {
   min-width: 0; 
   margin-right: 15px; }
 
+.first__slider.slick-slider .slick-track {
+  height: 373px;
+}
+
 .first__slider-img img {
   max-width: 100%;
   width: 100%;
-  -o-object-fit: cover;
-  object-fit: cover; }
+  height: 100%;
+  /* -o-object-fit: cover;
+  object-fit: cover;  */ }
 
 .first__slider .slick-dots {
   position: absolute;
@@ -2128,7 +2133,10 @@ filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><fi
     padding: 10px; } 
   .first__descrip {
     flex: 0 1 100%;
-    margin-right: 0; } }
+    margin-right: 0; 
+    margin-bottom: 50px; } 
+  .single .first__descrip {
+    margin-bottom: 0; } }
 
 @media (max-width: 515px) {
   .first {
