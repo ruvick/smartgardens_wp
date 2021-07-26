@@ -1,12 +1,4 @@
-<?php get_header(); 
-
-/*
-Template Name: Шаблон карточки товаров
-WP Post Template: Шаблон карточки товаров
-Template Post Type: post
-*/ 
-
-?>
+<?php get_header(); ?>
 
 <?php get_template_part('template-parts/header-section');?>
 
@@ -119,6 +111,35 @@ Template Post Type: post
 							<source src="<?php echo get_template_directory_uri();?>/img/video/video.mp4" type='video/ogg; codecs="theora, vorbis"'>
 						</video>
 					</a>
+
+					<h3>Галерея</h3>
+					<div class="about__gallery-row d-flex">
+
+						<div class="about__gallery-img">
+							<img src="<?php echo get_template_directory_uri();?>/img/gallery/01.jpg" alt="">
+						</div>
+
+						<div class="about__gallery-img">
+							<img src="<?php echo get_template_directory_uri();?>/img/gallery/02.jpg" alt="">
+						</div>
+
+						<div class="about__gallery-img">
+							<img src="<?php echo get_template_directory_uri();?>/img/gallery/03.jpg" alt="">
+						</div>
+
+						<div class="about__gallery-img">
+							<img src="<?php echo get_template_directory_uri();?>/img/gallery/04.jpg" alt="">
+						</div>
+
+						<div class="about__gallery-img">
+							<img src="<?php echo get_template_directory_uri();?>/img/gallery/05.jpg" alt="">
+						</div>
+
+						<div class="about__gallery-img">
+							<img src="<?php echo get_template_directory_uri();?>/img/gallery/06.jpg" alt="">
+						</div>
+
+					</div>
 
 					<div id="advant" class="advantages-block">
 						<h2>Преимущества</h2>

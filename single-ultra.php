@@ -1,4 +1,12 @@
-<?php get_header(); ?>
+<?php get_header(); 
+
+/*
+Template Name: Шаблон карточки товаров
+WP Post Template: Шаблон карточки товаров
+Template Post Type: post
+*/ 
+
+?>
 
 <?php get_template_part('template-parts/header-section');?>
 
