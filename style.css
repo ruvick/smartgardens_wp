@@ -1564,6 +1564,14 @@ body.ie .ibg img {
   padding: 320px 0 100px 0;
   background: #FBFEFA; }
 
+.all-products {
+  padding: 35px 0 35px 0;
+}
+
+.all-products h2 {
+  margin-bottom: 15px;
+}
+
 .products h2 {
   color: #588668;
   margin-bottom: 33px; }
@@ -2120,6 +2128,8 @@ filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><fi
     padding: 35px 0; }
   .about__gallery-img {
 		flex: 0 1 48%; }
+  .all-products {
+    padding-top: 75px; }
 }
 
 @media (max-width: 700px) {
