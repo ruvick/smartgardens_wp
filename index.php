@@ -20,7 +20,7 @@
 								Выращивайте свежую зелень прямо у себя дома <br>
 								вне зависимости от времени года и погоды на улице
 							</p>
-							<a href="<?php echo get_permalink(22);?>" class="first__btn btn">ПОДРОБНЕЕ</a>
+							<a href="<?php echo get_permalink(45);?>" class="first__btn btn">ПОДРОБНЕЕ</a>
 						</div>
 						<div class="first__slider">
 							<div class="first__slider-img">
@@ -196,7 +196,7 @@
 								$query->the_post();
 								get_template_part('template-parts/product-elem');
 							}  
-							wp_reset_postdata();
+							wp_reset_postdata(); 
 						?>
 
 					</div>
