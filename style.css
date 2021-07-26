@@ -1956,7 +1956,7 @@ filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><fi
 }
 
 .single #breadcrumbs {
-  margin-bottom: 25px;
+  margin-bottom: 35px;
 }
 
 .single .about {
@@ -1967,7 +1967,9 @@ filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><fi
   padding: 60px 0;
 }
 
-
+.about-taxonomy .advantages-block {
+  bottom: -60%; 
+}
 
 
 
