@@ -1406,7 +1406,7 @@ body.ie .ibg img {
   margin-right: 15px; }
 
 .first__slider.slick-slider .slick-track {
-  height: 373px;
+  height: 466px;
 }
 
 .first__slider-img img {
@@ -1437,6 +1437,7 @@ body.ie .ibg img {
   border-radius: 50%;
   border: 0.3px solid #737373;
   background: #fff;
+  cursor: pointer;
   margin-right: 15px; }
 
 .first__slider .slick-dots li.slick-active {
@@ -2132,6 +2133,8 @@ filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><fi
 		flex: 0 1 48%; }
   .all-products {
     padding-top: 75px; }
+  .first__slider.slick-slider .slick-track {
+    height: 349px; }
 }
 
 @media (max-width: 700px) {
