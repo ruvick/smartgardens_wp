@@ -22,6 +22,8 @@
     "send_part": "scp -C -r template-parts sergpagr_smart@sergpagr.beget.tech:smartgardens//public_html/wp-content/themes/smartgardens/",
     "mk_part_img": "ssh sergpagr_smart@sergpagr.beget.tech \"mkdir -p smartgardens//public_html/wp-content/themes/smartgardens/img\"",
     "send_img": "scp -r img sergpagr_smart@sergpagr.beget.tech:smartgardens//public_html/wp-content/themes/smartgardens/",
+    "mk_part_images": "ssh sergpagr_smart@sergpagr.beget.tech \"mkdir -p smartgardens//public_html/wp-content/themes/smartgardens/images\"",
+    "send_images": "scp -r images *.svg sergpagr_smart@sergpagr.beget.tech:smartgardens//public_html/wp-content/themes/smartgardens/",
     "mk_part_js": "ssh sergpagr_smart@sergpagr.beget.tech \"mkdir -p smartgardens//public_html/wp-content/themes/smartgardens/js\"",
     "send_js": "scp -r js sergpagr_smart@sergpagr.beget.tech:smartgardens//public_html/wp-content/themes/smartgardens/",
     "mk_part_css": "ssh sergpagr_smart@sergpagr.beget.tech \"mkdir -p smartgardens//public_html/wp-content/themes/smartgardens/css\"",
