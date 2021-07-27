@@ -115,29 +115,29 @@
 					<h3>Галерея</h3>
 					<div class="about__gallery-row d-flex">
 
-						<div class="about__gallery-img">
-							<img src="<?php echo get_template_directory_uri();?>/img/gallery/01.jpg" alt="">
-						</div>
+						<a href="<?php echo get_template_directory_uri();?>/img/gallery/01.jpg" rel="lightbox" class="about__gallery-img"> 
+							<img src="<?php echo get_template_directory_uri();?>/img/gallery/01.jpg" alt=""> 
+						</a>
 
-						<div class="about__gallery-img">
-							<img src="<?php echo get_template_directory_uri();?>/img/gallery/02.jpg" alt="">
-						</div>
+						<a href="<?php echo get_template_directory_uri();?>/img/gallery/02.jpg" rel="lightbox" class="about__gallery-img"> 
+							<img src="<?php echo get_template_directory_uri();?>/img/gallery/02.jpg" alt=""> 
+						</a>
 
-						<div class="about__gallery-img">
+						<a href="<?php echo get_template_directory_uri();?>/img/gallery/03.jpg" rel="lightbox" class="about__gallery-img"> 
 							<img src="<?php echo get_template_directory_uri();?>/img/gallery/03.jpg" alt="">
-						</div>
+						</a>
 
-						<div class="about__gallery-img">
+						<a href="<?php echo get_template_directory_uri();?>/img/gallery/04.jpg" rel="lightbox" class="about__gallery-img"> 
 							<img src="<?php echo get_template_directory_uri();?>/img/gallery/04.jpg" alt="">
-						</div>
+						</a>
 
-						<div class="about__gallery-img">
+						<a href="<?php echo get_template_directory_uri();?>/img/gallery/05.jpg" rel="lightbox" class="about__gallery-img"> 
 							<img src="<?php echo get_template_directory_uri();?>/img/gallery/05.jpg" alt="">
-						</div>
+						</a>
 
-						<div class="about__gallery-img">
+						<a href="<?php echo get_template_directory_uri();?>/img/gallery/06.jpg" rel="lightbox" class="about__gallery-img"> 
 							<img src="<?php echo get_template_directory_uri();?>/img/gallery/06.jpg" alt="">
-						</div>
+						</a>
 
 					</div>
 

@@ -359,4 +359,6 @@ $('.popup__form-btn').click(function (e) {
 
 $(".fancybox").fancybox();
 
+$('.about__gallery-img img').parent('a').attr("data-lightbox", 'gallery');
+
 // }
