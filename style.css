@@ -1406,7 +1406,11 @@ body.ie .ibg img {
   margin-right: 15px; }
 
 .first__slider.slick-slider .slick-track {
-  height: 466px;
+  height: 466px; 
+}
+
+.index-first .first__slider.slick-slider .slick-track { 
+  height: 373px;
 }
 
 .first__slider-img img {
@@ -2135,6 +2139,8 @@ filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><fi
     padding-top: 75px; }
   .first__slider.slick-slider .slick-track {
     height: 349px; }
+  .index-first .first__slider.slick-slider .slick-track { 
+    height: 280px; }
 }
 
 @media (max-width: 700px) {

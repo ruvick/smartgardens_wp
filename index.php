@@ -3,7 +3,7 @@
 <?php get_template_part('template-parts/header-section');?>
 
 <main class="page">
-			<section id="first" class="first">
+			<section id="first" class="index-first first">
 				<div class="container">
 
 					<div class="first__flex-block d-flex">
