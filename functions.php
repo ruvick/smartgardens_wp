@@ -12,7 +12,7 @@ use Carbon_Fields\Field;
 
 add_action( 'carbon_fields_register_fields', 'crb_attach_theme_options' ); 
 function crb_attach_theme_options() {
-	require_once __DIR__ . "/themes-fields.php";
+	require_once __DIR__ . "/themes-fields.php"; 
 }
 
 add_action( 'after_setup_theme', 'crb_load' );
@@ -72,8 +72,8 @@ add_action( 'wp_enqueue_scripts', 'my_assets' );
 
 		// Подключение стилей 
 
-		$style_version = "1.0.3";
-		$scrypt_version = "1.0.3"; 
+		$style_version = "1.0.4";
+		$scrypt_version = "1.0.4"; 
 		
 		wp_enqueue_style("style-modal", get_template_directory_uri()."/css/jquery.arcticmodal-0.3.css", array(), $style_version, 'all'); //Модальные окна (стили)
 		wp_enqueue_style("style-lightbox", get_template_directory_uri()."/css/lightbox.min.css", array(), $style_version, 'all'); //Лайтбокс (стили)
@@ -94,7 +94,7 @@ add_action( 'wp_enqueue_scripts', 'my_assets' );
 
 		wp_enqueue_script( 'main', get_template_directory_uri().'/js/main.js', array(), $scrypt_version , true); // Подключение основного скрипта в самом конце
 		
-		if ( is_page(20))
+		if ( is_page(20)) 
 		{
 			wp_enqueue_script( 'vue', get_template_directory_uri().'/js/vue.js', array(), ALL_VERSION , true);
 			wp_enqueue_script( 'axios', get_template_directory_uri().'/js/axios.min.js', array(), ALL_VERSION , true);
@@ -508,8 +508,3 @@ function send_cart() {
 		wp_die( 'НО-НО-НО!', '', 403 );
 	}
 }
-
-
-	
-
-?>
