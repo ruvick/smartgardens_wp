@@ -1,7 +1,7 @@
 <?php
 
 define("COMPANY_NAME", "SMARTGARDENS");
-define("MAIL_RESEND", "noreply@ultrakresla.ru");
+define("MAIL_RESEND", "noreply@smartgardens.ru");
 
 //----Подключене carbon fields
 //----Инструкции по подключению полей см. в комментариях themes-fields.php

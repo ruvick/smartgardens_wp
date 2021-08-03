@@ -10,7 +10,7 @@
 						<div class="first__descrip">
 							<h1>
 								Гидропонная установка <br>  
-								у вас дома
+								у вас дома 
 							</h1>
 							<div class="first__price-block d-flex">
 								<div class="first__price-old">5500 <span>руб.</span></div>
