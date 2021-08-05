@@ -976,7 +976,8 @@ body.ie .ibg img {
 	position: relative;
 	flex: 0 0 208px;
 	height: 60px;
-	margin-right: 38px; }
+	/* margin-right: 38px;  */
+  margin-right: 15px; }
 
 /* .logo-icon span {
   display: block;
@@ -1002,9 +1003,11 @@ body.ie .ibg img {
 
 .menu {
   -webkit-box-flex: 0;
-  -ms-flex: 0 1 525px;
-  flex: 0 1 525px;
-  min-height: 40px; }
+  -ms-flex: 1 1 525px;
+  flex: 1 1 525px;
+  margin-right: 15px;
+  /* min-height: 40px;  */
+}
   .menu__list {
     display: flex;
     -webkit-box-pack: justify;
@@ -1015,7 +1018,9 @@ body.ie .ibg img {
   .menu a {
     display: block;
     font-size: 18px;
-    font-weight: 500; }
+    line-height: 1.3;
+    font-weight: 500;
+    margin-right: 8px; }
 
 .header__contacts {
   display: -webkit-box;
