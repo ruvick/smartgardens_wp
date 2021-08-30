@@ -5,6 +5,7 @@
 <main class="page">
 	<section id="all-products" class="all-products">
 		<div class="container">
+			<?php if (function_exists('kama_breadcrumbs')) kama_breadcrumbs(); ?>
 			<h2><?php single_cat_title('', true); ?></h2>
 			<div class="prod-card d-flex">
 				<?php
