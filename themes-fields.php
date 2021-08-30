@@ -21,15 +21,11 @@ Container::make('theme_options', __('Настройки темы', 'crb'))
     Field::make('text', 'product_descp', 'Описание товара')->set_width(50),
   ))
   ->add_tab('Технические характеристики товара', array(
-    Field::make('text', 'product_home_power', 'Мощность')->set_width(25),
-    Field::make('text', 'product_color_rendering_index', 'Индекс цветопередачи')->set_width(25),
-    Field::make('text', 'product_dimer_support', 'Поддержка димера')->set_width(25),
-    Field::make('text', 'product_voltage', 'Напряжение')->set_width(25),
-    Field::make('text', 'product_light_flow', 'Световой поток')->set_width(25),
-    Field::make('text', 'product_body_material', 'Материал корпуса')->set_width(25),
-    Field::make('text', 'product_certification', 'Сертификация')->set_width(25),
-    Field::make('text', 'product_number_leds', 'Количество светодиодов')->set_width(25),
-    Field::make('text', 'product_led_colors', 'Цвета светодиодов')->set_width(25),
+    Field::make('complex', 'product_specifications', "Таблица")
+      ->add_fields(array(
+        Field::make('text', 'parameter_name', 'Имя параметра')->set_width(50),
+        Field::make('text', 'parameter_value', 'Значение параметра')->set_width(50)
+      )),
   ))
   ->add_tab('Контакты', array(
     Field::make('text', 'as_company', __('Название'))

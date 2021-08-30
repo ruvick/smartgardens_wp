@@ -55,52 +55,23 @@
 			<h3>Технические характеристики</h3>
 
 			<div class="about__charact charact__row">
-
 				<div class="charact__line d-flex">
-					<div class="charact__tab d-flex">
-						<div class="charact__value">Мощность</div>
-						<div class="charact__property"><?php echo carbon_get_theme_option('product_home_power'); ?> Вт</div>
-					</div>
-					<div class="charact__tab d-flex">
-						<div class="charact__value">Индекс цветопередачи</div>
-						<div class="charact__property"><?php echo carbon_get_theme_option('product_color_rendering_index'); ?> Ra</div>
-					</div>
-					<div class="charact__tab d-flex">
-						<div class="charact__value">Поддержка димера</div>
-						<div class="charact__property"><?php echo carbon_get_theme_option('product_dimer_support'); ?></div>
-					</div>
+					<?
+					$pspecific = carbon_get_theme_option('product_specifications');
+					if ($pspecific) {
+						$pspecificIndex = 0;
+						foreach ($pspecific as $item) {
+					?>
+							<div class="charact__tab d-flex">
+								<div class="charact__value"><? echo $item['parameter_name']; ?></div>
+								<div class="charact__property"><? echo $item['parameter_value']; ?></div>
+							</div>
+					<?
+							$pspecificIndex++;
+						}
+					}
+					?>
 				</div>
-
-				<div class="charact__line d-flex">
-					<div class="charact__tab d-flex">
-						<div class="charact__value">Напряжение</div>
-						<div class="charact__property"><?php echo carbon_get_theme_option('product_voltage'); ?></div>
-					</div>
-					<div class="charact__tab d-flex">
-						<div class="charact__value">Световой поток</div>
-						<div class="charact__property"><?php echo carbon_get_theme_option('product_light_flow'); ?> Лм</div>
-					</div>
-					<div class="charact__tab d-flex">
-						<div class="charact__value">Материал корпуса</div>
-						<div class="charact__property"><?php echo carbon_get_theme_option('product_body_material'); ?></div>
-					</div>
-				</div>
-
-				<div class="charact__line d-flex">
-					<div class="charact__tab d-flex">
-						<div class="charact__value">Сертификация</div>
-						<div class="charact__property"><?php echo carbon_get_theme_option('product_certification'); ?></div>
-					</div>
-					<div class="charact__tab d-flex">
-						<div class="charact__value">Количество светодиодов</div>
-						<div class="charact__property"><?php echo carbon_get_theme_option('product_number_leds'); ?></div>
-					</div>
-					<div class="charact__tab d-flex">
-						<div class="charact__value">Цвета светодиодов</div>
-						<div class="charact__property"><?php echo carbon_get_theme_option('product_led_colors'); ?></div>
-					</div>
-				</div>
-
 			</div>
 
 			<h3>Видеопрезентация</h3>
