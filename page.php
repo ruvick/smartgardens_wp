@@ -1,5 +1,5 @@
-
 <?php
+
 /**
  * The template for displaying all pages
  *
@@ -13,29 +13,25 @@
  * @package light_market
  */
 
-get_header(); ?> 
+get_header(); ?>
 
-<?php get_template_part('template-parts/header-section');?>
+<?php get_template_part('template-parts/header-section'); ?>
 
-	<main id="primary" class="page"> 
+<main id="primary" class="page">
 
-		<section class="content"> 
-			<div class="container">
+	<section class="content">
+		<div class="container">
 
-			<?php
-			if ( function_exists('yoast_breadcrumb') ) {
-				yoast_breadcrumb( '<p id="breadcrumbs">','</p>' ); 
-			}
-			?> 
+			<?php if (function_exists('kama_breadcrumbs')) kama_breadcrumbs(); ?>
 
-			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-				<h1><?php the_title();?></h1>
-					<?php the_content();?>
-					<?php endwhile;?>
-				<?php endif; ?> 
+			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+					<h1><?php the_title(); ?></h1>
+					<?php the_content(); ?>
+				<?php endwhile; ?>
+			<?php endif; ?>
 
-			</div>
-		</section>
-	</main>
+		</div>
+	</section>
+</main>
 
 <?php get_footer();

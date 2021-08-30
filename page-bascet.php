@@ -15,11 +15,7 @@ get_header(); ?>
 		<div class="container">
 
 			<div class="bread-crumbs-box">
-				<?php
-				if (function_exists('yoast_breadcrumb')) {
-					yoast_breadcrumb('<p id="breadcrumbs">', '</p>');
-				}
-				?>
+				<?php if (function_exists('kama_breadcrumbs')) kama_breadcrumbs(); ?>
 			</div>
 
 			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
