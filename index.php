@@ -10,8 +10,14 @@
 				<div class="first__descrip">
 					<h1><?php echo carbon_get_theme_option('product_home_title'); ?></h1>
 					<div class="first__price-block d-flex">
-						<div class="first__price-old"><?php echo carbon_get_theme_option('product_old_price'); ?> <span>руб.</span></div>
-						<div class="first__price-new"><?php echo carbon_get_theme_option('product_new_price'); ?> <span>руб.</span></div>
+						<? $product_old_price = carbon_get_theme_option("product_old_price");
+						if (!empty($product_old_price)) { ?>
+							<div class="first__price-old"><? echo $product_old_price; ?> <span>руб.</span></div>
+						<? } ?>
+						<? $product_new_price = carbon_get_theme_option("product_new_price");
+						if (!empty($product_new_price)) { ?>
+							<div class="first__price-new"><? echo $product_new_price; ?> <span>руб.</span></div>
+						<? } ?>
 					</div>
 					<p><?php echo carbon_get_theme_option('product_short_descp'); ?></p>
 					<a href="<?php echo get_permalink(45); ?>" class="first__btn btn">ПОДРОБНЕЕ</a>
