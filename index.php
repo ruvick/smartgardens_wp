@@ -46,7 +46,7 @@
 		<img src="<?php echo get_template_directory_uri(); ?>/img/sheet-03.png" class="about-bg-3" alt="">
 		<div class="container">
 
-			<? $product_descp = carbon_get_theme_option("product_descp");
+			<? $product_descp = apply_filters( 'the_content', carbon_get_theme_option("product_descp"));
 			if (!empty($product_descp)) { ?>
 				<h2><?php echo carbon_get_theme_option('product_title'); ?></h2>
 				<p><? echo $product_descp; ?></p>

@@ -8,6 +8,7 @@
     "clear_r": "ssh sergpagr_smart@sergpagr.beget.tech \"rm smartgardens//public_html/wp-content/themes/smartgardens/*.*\"",
     "send_r": "scp -C *.php *.png *.css sergpagr_smart@sergpagr.beget.tech:smartgardens//public_html/wp-content/themes/smartgardens/",
     "send_ms": "scp -C *.css sergpagr_smart@sergpagr.beget.tech:smartgardens//public_html/wp-content/themes/smartgardens/",
+    "send_carbon_f": "scp -C themes-fields.php sergpagr_smart@sergpagr.beget.tech:smartgardens//public_html/wp-content/themes/smartgardens/",
     "send_one": "scp -C page-pageresult.php sergpagr_smart@sergpagr.beget.tech:smartgardens//public_html/wp-content/themes/smartgardens/",
     "send_head": "scp -C header.php sergpagr_smart@sergpagr.beget.tech:smartgardens//public_html/wp-content/themes/smartgardens/",
     "send_cat": "scp -C category.php sergpagr_smart@sergpagr.beget.tech:smartgardens//public_html/wp-content/themes/smartgardens/",

@@ -18,7 +18,7 @@ Container::make('theme_options', __('Настройки темы', 'crb'))
     Field::make('text', 'product_new_price', 'Новая цена')->set_width(50),
     Field::make('text', 'product_short_descp', 'Краткое описание товара')->set_width(50),
     Field::make('text', 'product_title', 'Заголовок Описания товара')->set_width(50),
-    Field::make('text', 'product_descp', 'Описание товара')->set_width(50),
+    Field::make('rich_text', 'product_descp', 'Описание товара')->set_width(50),
   ))
   ->add_tab('Технические характеристики товара', array(
     Field::make('complex', 'product_specifications', "Таблица")
