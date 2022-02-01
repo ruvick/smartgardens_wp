@@ -16,7 +16,7 @@
 						<? } ?>
 						<? $product_new_price = carbon_get_theme_option("product_new_price");
 						if (!empty($product_new_price)) { ?>
-							<div class="first__price-new"><? echo $product_new_price; ?> <span>руб.</span></div>
+							<div class="first__price-new"><? echo $product_new_price; ?> <span>руб.</span></div> 
 						<? } ?>
 					</div>
 					<p><?php echo carbon_get_theme_option('product_short_descp'); ?></p>
